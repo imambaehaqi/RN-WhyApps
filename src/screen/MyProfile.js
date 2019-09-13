@@ -92,33 +92,31 @@ export default class MyProfile extends Component {
                 <View style={{ flex: 2, backgroundColor: 'white' }}>
                     <Image source={{ uri: User.photo }} style={styles.photoInProfile} />
                 </View>
-                <View style={{ flex: 3, backgroundColor: '#455a64' }}>
+                <View style={{ flex: 3, backgroundColor: 'white' }}>
                     <View style={styles.viewProfile}>
                         <View style={{ width: '20%' }}>
-                            <Icon name='user-astronaut' color='white' size={40} style={{ padding: 10 }} />
+                            <Icon name='user-astronaut' color='black' size={40} style={{ padding: 10 }} />
                         </View>
                         <Text numberOfLines={2} style={styles.textProfile}>{User.name}</Text>
                     </View>
                     <View style={styles.viewProfile}>
                         <View style={{ width: '20%' }}>
-                            <Icon name='mail-bulk' color='white' size={40} style={{ padding: 10 }} />
+                            <Icon name='mail-bulk' color='black' size={40} style={{ padding: 10 }} />
                         </View>
                         <Text numberOfLines={2} style={styles.textProfile}>{User.email}</Text>
                     </View>
                     <View style={styles.viewProfile}>
                         <View style={{ width: '20%' }}>
-                            <Icon name='phone-volume' color='white' size={40} style={{ padding: 10 }} />
+                            <Icon name='phone-volume' color='black' size={40} style={{ padding: 10 }} />
                         </View>
                         <Text style={styles.textProfile}>{User.telp}</Text>
                     </View>
                     <View style={styles.viewProfile}>
                         <TouchableOpacity onPress={() => this.setModalVisible(true)} style={styles.buttonMyProfile}>
-                            <Icon name='user-edit' color='#dbff26' size={40} style={{ padding: 10 }} />
-                            <Text style={{ fontSize: 18, color: '#dbff26', }}>Edit profile</Text>
+                            <Text style={styles.textChatList}>Edit profile</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={this.logout} style={styles.buttonMyProfile}>
-                            <Icon name='sign-out-alt' color='#fa1134' size={40} style={{ padding: 10 }} />
-                            <Text style={{ fontSize: 18, color: '#fa1134', }}>Logout</Text>
+                            <Text style={styles.textChatList}>Logout</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

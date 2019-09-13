@@ -108,7 +108,7 @@ export default class ChatList extends Component {
                                 onLongPress={() => this.props.navigation.navigate('Profile', item)}
                                 onPress={() => this.props.navigation.navigate('Chat', item)}>
                                 <Image source={{ uri: item.photo }} style={styles.imgChatList} />
-                                <View style={{ padding: 10, }}>
+                                <View style={{ padding: 10 }}>
                                     <Text numberOfLines={1} style={styles.textChatList}>{item.name}</Text>
                                     <Text numberOfLines={1} style={{ fontSize: 15, color: '#000000' }}>{item.telp}</Text>
                                     {(item.status) ?

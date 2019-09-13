@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderRadius: 7,
-        backgroundColor: 'rgba(255, 255,255,0.2)'
+        justifyContent: 'center'
     },
     buttonText: {
         fontSize: 16,
@@ -64,14 +64,15 @@ const styles = StyleSheet.create({
     },
     containerMyProfile: {
         flex: 1,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        borderBottomColor: '#ccc'
     },
     containerProfile: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 2,
-        borderBottomColor: 'white'
+        borderBottomColor: '#ccc'
     },
     containerRegister: {
         backgroundColor: '#ffffff',
@@ -155,12 +156,12 @@ const styles = StyleSheet.create({
     },
     textProfile: {
         fontSize: 18,
-        color: 'white'
+        color: 'black'
     },
     textStatusMap: {
         fontWeight: 'bold',
         textAlign: 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#ccc',
     },
     viewMap: {
         width: 250,
@@ -173,7 +174,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 2,
-        borderBottomColor: 'white'
+        borderBottomColor: '#ccc'
     }
 })
 

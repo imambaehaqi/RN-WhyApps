@@ -27,7 +27,7 @@ export default class MyProfile extends Component {
                 <View style={styles.containerMyProfile}>
                     <Image source={{ uri: this.state.photo }} style={styles.photoInProfile} />
                 </View>
-                <View style={{ flex: 1, backgroundColor: '#455a64' }}>
+                <View style={{ flex: 1, backgroundColor: 'white' }}>
                     <View style={styles.containerProfile}>
                         <View style={{ width: '20%' }}>
                             <Icon name='user-astronaut' color='white' size={40} style={{ padding: 10 }} />
