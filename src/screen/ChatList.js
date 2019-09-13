@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { Alert, Text, TouchableOpacity, SafeAreaView, FlatList, Image, View } from 'react-native'
 import firebase from './rootNavigator/firebase'
 import Geolocation from '@react-native-community/geolocation'
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import {Icon} from 'react-native-elements'
 import User from './User'
 import styles from '../assets/Styles'
 
 export default class ChatList extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -16,15 +17,10 @@ export default class ChatList extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            title: 'Chats',
-            headerLeft: (
-                <TouchableOpacity onPress={() => navigation.navigate('Maps')}>
-                    <Icon name='map-marked-alt' size={30} color='#455a64' style={{ padding: 10 }} />
-                </TouchableOpacity>
-            ),
+            title: 'WhyApps',
             headerRight: (
                 <TouchableOpacity onPress={() => navigation.navigate('MyProfile')}>
-                    <Icon name='user-cog' size={30} color='#455a64' style={{ padding: 10 }} />
+                    <Image source={require('../assets/user.png')} size={30} style={{ padding: 10 }} />
                 </TouchableOpacity>
             )
         }
@@ -38,7 +34,7 @@ export default class ChatList extends Component {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude,
                     status: status
-                });
+                })
                 // await dbRef1.onDisconnect().update({
                 //     latitude: position.coords.latitude,
                 //     longitude: position.coords.longitude,
@@ -94,7 +90,7 @@ export default class ChatList extends Component {
     }
 
     maps = () => {
-        this.props.navigation.navigate('Maps');
+        this.props.navigation.navigate('Maps')
     }
 
     componentWillUnmount(){
@@ -114,10 +110,10 @@ export default class ChatList extends Component {
                                 <Image source={{ uri: item.photo }} style={styles.imgChatList} />
                                 <View style={{ padding: 10, }}>
                                     <Text numberOfLines={1} style={styles.textChatList}>{item.name}</Text>
-                                    <Text numberOfLines={1} style={{ fontSize: 15, color: '#acaeb0' }}>{item.telp}</Text>
+                                    <Text numberOfLines={1} style={{ fontSize: 15, color: '#000000' }}>{item.telp}</Text>
                                     {(item.status) ?
-                                        (<Text style={{ fontSize: 15, color: '#11f515' }}>online</Text>) :
-                                        (<Text style={{ fontSize: 15, color: '#f00514' }}>offline</Text>)
+                                        (<Text style={{ fontSize: 15, color: '#00cc44' }}>Online</Text>) :
+                                        (<Text style={{ fontSize: 15, color: '#C6C6C6' }}>Offline</Text>)
                                     }
                                 </View>
                             </TouchableOpacity>
@@ -125,6 +121,9 @@ export default class ChatList extends Component {
                     }}
                     keyExtractor={(item, index) => index.toString()}
                 />
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Maps')}>
+                    <Icon name='directions' size={30} color='#455a64' style={{ padding: 10 }} />
+                </TouchableOpacity>
             </SafeAreaView>
         )
     }

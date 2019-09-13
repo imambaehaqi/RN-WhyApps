@@ -17,6 +17,7 @@ import java.util.Arrays;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -40,7 +41,8 @@ public class MainApplication extends Application implements ReactApplication {
             new MainReactPackage(),
             new GeolocationPackage(),
             new MapsPackage(),
-            new RNGestureHandlerPackage()
+            new RNGestureHandlerPackage(),
+            new VectorIconsPackage()
         );
     }
 

@@ -41,21 +41,21 @@ export default class Form extends Component {
         return (
             <View style={styles.container}>
                 <TextInput style={styles.inputBox}
-                    underlineColorAndroid='rgba(0,0,0,0)'
+                    underlineColorAndroid='grey'
                     placeholder="Email"
-                    placeholderTextColor="#ffffff"
-                    selectionColor="#fff"
+                    placeholderTextColor="grey"
+                    selectionColor="grey"
                     keyboardType="email-address"
                     value={this.state.email}
                     maxLength={64}
                     onChangeText={this.changerValue('email')}
                     onSubmitEditing={() => this.password.focus()} />
                 <TextInput style={styles.inputBox}
-                    underlineColorAndroid='rgba(0,0,0,0)'
+                    underlineColorAndroid='grey'
                     placeholder="Password"
-                    selectionColor="#fff"
+                    selectionColor="grey"
                     secureTextEntry={true}
-                    placeholderTextColor="#ffffff"
+                    placeholderTextColor="grey"
                     value={this.state.password}
                     maxLength={32}
                     onChangeText={this.changerValue('password')}

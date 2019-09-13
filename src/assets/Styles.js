@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     containerChatList: {
-        backgroundColor: '#455a64',
+        backgroundColor: '#ffffff',
         alignItems: 'center',
         padding: 5,
         borderBottomWidth: 1,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     containerLogo: {
         flexGrow: 1,
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'center'
     },
     containerMap: {
@@ -74,13 +74,13 @@ const styles = StyleSheet.create({
         borderBottomColor: 'white'
     },
     containerRegister: {
-        backgroundColor: '#455a64',
+        backgroundColor: '#ffffff',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
     },
     containerIsLoading: {
-        backgroundColor: '#455a64',
+        backgroundColor: '#ffffff',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         paddingHorizontal: 16,
         fontSize: 16,
-        color: '#ffffff',
+        color: 'black',
         marginVertical: 7,
     },
     itemMap: {
@@ -127,24 +127,18 @@ const styles = StyleSheet.create({
         height: '25%',
         backgroundColor: 'rgba(255,255,255, 0.3)'
     },
-    logoText: {
-        marginVertical: 15,
-        fontSize: 24,
-        fontFamily: 'sans-serif-thin',
-        color: 'rgba(255, 255, 255, 0.7)'
-    },
     photoInProfile: {
         width: '80%',
         height: '100%',
         alignSelf: 'center'
     },
     signupButton: {
-        color: '#ffffff',
+        color: 'grey',
         fontSize: 16,
-        fontWeight: '500'
+        fontWeight: 'bold'
     },
     signupText: {
-        color: 'rgba(255,255,255,0.6)',
+        color: 'grey',
         fontSize: 16
     },
     signupTextCont: {
@@ -157,7 +151,7 @@ const styles = StyleSheet.create({
     textChatList: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: 'white'
+        color: 'black'
     },
     textProfile: {
         fontSize: 18,

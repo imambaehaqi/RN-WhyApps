@@ -8,7 +8,7 @@ const RootNavigator = createAppContainer(Navigator)
 const App = () => { 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#1c313a" barStyle="light-conten"/>
+      <StatusBar backgroundColor="#1c313a" barStyle="light-content"/>
       <RootNavigator/>
     </View>
   )
