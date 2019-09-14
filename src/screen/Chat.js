@@ -42,9 +42,9 @@ export default class Chat extends Component {
                       avatar: User.photo,
                     }
             }
-            updates['messages/' + User.uid + '/' + this.state.person.uid + '/' + msgId] = message;
-            updates['messages/' + this.state.person.uid + '/' + User.uid + '/' + msgId] = message;
-            firebase.database().ref().update(updates);
+            updates['messages/' + User.uid + '/' + this.state.person.uid + '/' + msgId] = message
+            updates['messages/' + this.state.person.uid + '/' + User.uid + '/' + msgId] = message
+            firebase.database().ref().update(updates)
             this.setState({ message: '' })
         }
     }
@@ -55,7 +55,6 @@ export default class Chat extends Component {
                 this.setState(previousState => ({
                     messageList: GiftedChat.append(previousState.messageList, val.val()),
                   }))
-
             })
     }
 

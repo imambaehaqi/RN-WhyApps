@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
     button: {
         width: 300,
-        backgroundColor: '#1c313a',
+        backgroundColor: '#CC7C64',
         borderRadius: 25,
         marginVertical: 10,
         paddingVertical: 13
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
         height: 75
     },
     containerLogo: {
-        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -75,16 +74,15 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ccc'
     },
     containerRegister: {
-        backgroundColor: '#ffffff',
+        backgroundColor: 'white',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
     },
     containerIsLoading: {
-        backgroundColor: '#ffffff',
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
     },
     imgChatList: {
         width: '20%',
@@ -134,13 +132,13 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     signupButton: {
-        color: 'grey',
-        fontSize: 16,
+        color: '#1E3226',
+        fontSize: 12,
         fontWeight: 'bold'
     },
     signupText: {
-        color: 'grey',
-        fontSize: 16
+        color: '#1E3226',
+        fontSize: 12
     },
     signupTextCont: {
         flexGrow: 1,
@@ -154,9 +152,17 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'black'
     },
+    textTitleProfile: {
+        padding: 5,
+        fontSize: 10,
+        color: '#1E3226',
+    },
     textProfile: {
         fontSize: 18,
-        color: 'black'
+        color:'black',
+        padding: 5,
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc'
     },
     textStatusMap: {
         fontWeight: 'bold',
@@ -170,6 +176,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     viewProfile: {
+        color: 'black',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',

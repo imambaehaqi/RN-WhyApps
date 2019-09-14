@@ -12,7 +12,7 @@ export default class IsLogin extends React.Component {
 
   _bootstrapAsync = async () => {
     User.uid = await AsyncStorage.getItem('uid');
-    setTimeout(()=>this.props.navigation.navigate(User.uid ? 'App' : 'Auth'),1000)
+    setTimeout(()=>this.props.navigation.navigate(User.uid ? 'App' : 'Auth'), 1000)
     
   }
   

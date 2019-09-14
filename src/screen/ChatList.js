@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Text, TouchableOpacity, SafeAreaView, FlatList, Image, View } from 'react-native'
+import { Alert, Text, TouchableOpacity, SafeAreaView, FlatList, Image, View, ScrollView } from 'react-native'
 import firebase from './rootNavigator/firebase'
 import Geolocation from '@react-native-community/geolocation'
 import {Icon} from 'react-native-elements'
@@ -100,29 +100,31 @@ export default class ChatList extends Component {
     render() {
         return (
             <SafeAreaView>
-                <FlatList
-                    data={this.state.users}
-                    renderItem={({ item }) => {
-                        return (
-                            <TouchableOpacity style={styles.containerChatList}
-                                onLongPress={() => this.props.navigation.navigate('Profile', item)}
-                                onPress={() => this.props.navigation.navigate('Chat', item)}>
-                                <Image source={{ uri: item.photo }} style={styles.imgChatList} />
-                                <View style={{ padding: 10 }}>
-                                    <Text numberOfLines={1} style={styles.textChatList}>{item.name}</Text>
-                                    <Text numberOfLines={1} style={{ fontSize: 15, color: '#000000' }}>{item.telp}</Text>
-                                    {(item.status) ?
-                                        (<Text style={{ fontSize: 15, color: '#00cc44' }}>Online</Text>) :
-                                        (<Text style={{ fontSize: 15, color: '#C6C6C6' }}>Offline</Text>)
-                                    }
-                                </View>
-                            </TouchableOpacity>
-                        )
-                    }}
-                    keyExtractor={(item, index) => index.toString()}
-                />
+                <ScrollView>
+                    <FlatList
+                        data={this.state.users}
+                        renderItem={({ item }) => {
+                            return (
+                                <TouchableOpacity style={styles.containerChatList}
+                                    onLongPress={() => this.props.navigation.navigate('Profile', item)}
+                                    onPress={() => this.props.navigation.navigate('Chat', item)}>
+                                    <Image source={{ uri: item.photo }} style={styles.imgChatList} />
+                                    <View style={{ padding: 10 }}>
+                                        <Text numberOfLines={1} style={styles.textChatList}>{item.name}</Text>
+                                        <Text numberOfLines={1} style={{ fontSize: 15, color: '#000000' }}>{item.telp}</Text>
+                                        {(item.status) ?
+                                            (<Text style={{ fontSize: 15, color: '#00cc44' }}>Online</Text>) :
+                                            (<Text style={{ fontSize: 15, color: '#C6C6C6' }}>Offline</Text>)
+                                        }
+                                    </View>
+                                </TouchableOpacity>
+                            )
+                        }}
+                        keyExtractor={(item, index) => index.toString()}
+                    />
+                </ScrollView>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Maps')}>
-                    <Icon name='directions' size={30} color='#455a64' style={{ padding: 10 }} />
+                    <Image source={require('../assets/user.png')} style={{ padding: 10 }} />
                 </TouchableOpacity>
             </SafeAreaView>
         )

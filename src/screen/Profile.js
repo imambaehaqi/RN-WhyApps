@@ -28,24 +28,12 @@ export default class MyProfile extends Component {
                     <Image source={{ uri: this.state.photo }} style={styles.photoInProfile} />
                 </View>
                 <View style={{ flex: 1, backgroundColor: 'white' }}>
-                    <View style={styles.containerProfile}>
-                        <View style={{ width: '20%' }}>
-                            <Icon name='user-astronaut' color='white' size={40} style={{ padding: 10 }} />
-                        </View>
+                        <Text style={styles.textTitleProfile}>Full Name:</Text>
                         <Text style={styles.textProfile}>{this.state.name}</Text>
-                    </View>
-                    <View style={styles.containerProfile}>
-                        <View style={{ width: '20%' }}>
-                            <Icon name='mail-bulk' color='white' size={40} style={{ padding: 10 }} />
-                        </View>
+                        <Text style={styles.textTitleProfile}>Email:</Text>
                         <Text style={styles.textProfile}>{this.state.email}</Text>
-                    </View>
-                    <View style={styles.containerProfile}>
-                        <View style={{ width: '20%' }}>
-                            <Icon name='phone-volume' color='white' size={40} style={{ padding: 10 }} />
-                        </View>
+                        <Text style={styles.textTitleProfile}>Handphone:</Text>
                         <Text style={styles.textProfile}>{this.state.telp}</Text>
-                    </View>
                 </View>
             </View>
         )
